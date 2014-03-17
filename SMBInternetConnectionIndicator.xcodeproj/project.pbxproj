@@ -21,6 +21,10 @@
 		7E49A94D18D75C5700FD3FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92F18D75C5700FD3FDD /* UIKit.framework */; };
 		7E49A95518D75C5700FD3FDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A95318D75C5700FD3FDD /* InfoPlist.strings */; };
 		7E49A95718D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A95618D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m */; };
+		7E49A96218D75D0900FD3FDD /* SMBInternetConnectionIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A96118D75D0900FD3FDD /* SMBInternetConnectionIndicator.m */; };
+		7E49A96418D75D6800FD3FDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A96318D75D6800FD3FDD /* SystemConfiguration.framework */; };
+		7E49A96718D75D8100FD3FDD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A96618D75D8100FD3FDD /* Reachability.m */; };
+		7E49A96918D75D9500FD3FDD /* Reachability LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A96818D75D9500FD3FDD /* Reachability LICENCE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		7E49A95218D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMBInternetConnectionIndicatorTests-Info.plist"; sourceTree = "<group>"; };
 		7E49A95418D75C5700FD3FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E49A95618D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicatorTests.m; sourceTree = "<group>"; };
+		7E49A96018D75D0900FD3FDD /* SMBInternetConnectionIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBInternetConnectionIndicator.h; sourceTree = "<group>"; };
+		7E49A96118D75D0900FD3FDD /* SMBInternetConnectionIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicator.m; sourceTree = "<group>"; };
+		7E49A96318D75D6800FD3FDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7E49A96518D75D8100FD3FDD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7E49A96618D75D8100FD3FDD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7E49A96818D75D9500FD3FDD /* Reachability LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Reachability LICENCE.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49A96418D75D6800FD3FDD /* SystemConfiguration.framework in Frameworks */,
 				7E49A92E18D75C5700FD3FDD /* CoreGraphics.framework in Frameworks */,
 				7E49A93018D75C5700FD3FDD /* UIKit.framework in Frameworks */,
 				7E49A92C18D75C5700FD3FDD /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		7E49A92A18D75C5700FD3FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E49A96318D75D6800FD3FDD /* SystemConfiguration.framework */,
 				7E49A92B18D75C5700FD3FDD /* Foundation.framework */,
 				7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */,
 				7E49A92F18D75C5700FD3FDD /* UIKit.framework */,
@@ -112,6 +124,8 @@
 		7E49A93118D75C5700FD3FDD /* SMBInternetConnectionIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				7E49A96A18D75DA800FD3FDD /* Reachability */,
+				7E49A96B18D75E4200FD3FDD /* SMBInternetConnectionIndicator */,
 				7E49A93A18D75C5700FD3FDD /* smbAppDelegate.h */,
 				7E49A93B18D75C5700FD3FDD /* smbAppDelegate.m */,
 				7E49A93D18D75C5700FD3FDD /* Main.storyboard */,
@@ -150,6 +164,25 @@
 				7E49A95318D75C5700FD3FDD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E49A96A18D75DA800FD3FDD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A96818D75D9500FD3FDD /* Reachability LICENCE.txt */,
+				7E49A96518D75D8100FD3FDD /* Reachability.h */,
+				7E49A96618D75D8100FD3FDD /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		7E49A96B18D75E4200FD3FDD /* SMBInternetConnectionIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A96018D75D0900FD3FDD /* SMBInternetConnectionIndicator.h */,
+				7E49A96118D75D0900FD3FDD /* SMBInternetConnectionIndicator.m */,
+			);
+			name = SMBInternetConnectionIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E49A96918D75D9500FD3FDD /* Reachability LICENCE.txt in Resources */,
 				7E49A94418D75C5700FD3FDD /* Images.xcassets in Resources */,
 				7E49A93618D75C5700FD3FDD /* InfoPlist.strings in Resources */,
 				7E49A93F18D75C5700FD3FDD /* Main.storyboard in Resources */,
@@ -253,6 +287,8 @@
 				7E49A93818D75C5700FD3FDD /* main.m in Sources */,
 				7E49A93C18D75C5700FD3FDD /* smbAppDelegate.m in Sources */,
 				7E49A94218D75C5700FD3FDD /* smbViewController.m in Sources */,
+				7E49A96218D75D0900FD3FDD /* SMBInternetConnectionIndicator.m in Sources */,
+				7E49A96718D75D8100FD3FDD /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

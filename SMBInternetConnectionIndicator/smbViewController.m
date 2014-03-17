@@ -7,18 +7,27 @@
 //
 
 #import "smbViewController.h"
+#import "SMBInternetConnectionIndicator.h"
 
 @interface smbViewController ()
 
+//add the indicator view as a property
+@property () SMBInternetConnectionIndicator *internetConnectionIndicator;
+
 @end
+
 
 @implementation smbViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+    
+    //create frame for the indicator
+    CGRect screenRect               = CGRectMake(0, 10, 320, 30);
+    _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    [self.view addSubview:_internetConnectionIndicator];
+    }
 
 - (void)didReceiveMemoryWarning
 {
