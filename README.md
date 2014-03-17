@@ -1,7 +1,7 @@
 SMBInternetConnectionIndicator
 ==============================
 
-Internet Connection Indicator for iOS application
+Internet Connection Indicator for iOS applications. Shows you a warning when you're not connected to the internet/a certain server can't be reached. You can totally style this yourself. It looks great above TableViews, like in facebook. I will post screenshots of great implimentations soon. If you've made something cool with it, let me know.
 
 This class uses Reachability by Tony Million. 
 
