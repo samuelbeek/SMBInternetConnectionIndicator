@@ -16,7 +16,7 @@ This class uses Reachability by Tony Million.
 7. Now creat a rectamgle where you want to add the indicator in the viewDidLoad funciton: 
 <pre> 
     //create frame for the indicator
-    CGRect screenRect               = CGRectMake(0, 10, 320, 30);
+    CGRect screenRect                   = CGRectMake(0, 10, 320, 30);
     self.internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
     [self.view addSubview:_internetConnectionIndicator];
 </pre> 
