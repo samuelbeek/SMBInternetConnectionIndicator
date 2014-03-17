@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E49A92C18D75C5700FD3FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92B18D75C5700FD3FDD /* Foundation.framework */; };
+		7E49A92E18D75C5700FD3FDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */; };
+		7E49A93018D75C5700FD3FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92F18D75C5700FD3FDD /* UIKit.framework */; };
+		7E49A93618D75C5700FD3FDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A93418D75C5700FD3FDD /* InfoPlist.strings */; };
+		7E49A93818D75C5700FD3FDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A93718D75C5700FD3FDD /* main.m */; };
+		7E49A93C18D75C5700FD3FDD /* smbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A93B18D75C5700FD3FDD /* smbAppDelegate.m */; };
+		7E49A93F18D75C5700FD3FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A93D18D75C5700FD3FDD /* Main.storyboard */; };
+		7E49A94218D75C5700FD3FDD /* smbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A94118D75C5700FD3FDD /* smbViewController.m */; };
+		7E49A94418D75C5700FD3FDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A94318D75C5700FD3FDD /* Images.xcassets */; };
+		7E49A94B18D75C5700FD3FDD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A94A18D75C5700FD3FDD /* XCTest.framework */; };
+		7E49A94C18D75C5700FD3FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92B18D75C5700FD3FDD /* Foundation.framework */; };
+		7E49A94D18D75C5700FD3FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92F18D75C5700FD3FDD /* UIKit.framework */; };
+		7E49A95518D75C5700FD3FDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E49A95318D75C5700FD3FDD /* InfoPlist.strings */; };
+		7E49A95718D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E49A95618D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E49A94E18D75C5700FD3FDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E49A92018D75C5700FD3FDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E49A92718D75C5700FD3FDD;
+			remoteInfo = SMBInternetConnectionIndicator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7E49A92818D75C5700FD3FDD /* SMBInternetConnectionIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMBInternetConnectionIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E49A92B18D75C5700FD3FDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7E49A92F18D75C5700FD3FDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7E49A93318D75C5700FD3FDD /* SMBInternetConnectionIndicator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMBInternetConnectionIndicator-Info.plist"; sourceTree = "<group>"; };
+		7E49A93518D75C5700FD3FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E49A93718D75C5700FD3FDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E49A93918D75C5700FD3FDD /* SMBInternetConnectionIndicator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMBInternetConnectionIndicator-Prefix.pch"; sourceTree = "<group>"; };
+		7E49A93A18D75C5700FD3FDD /* smbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smbAppDelegate.h; sourceTree = "<group>"; };
+		7E49A93B18D75C5700FD3FDD /* smbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smbAppDelegate.m; sourceTree = "<group>"; };
+		7E49A93E18D75C5700FD3FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E49A94018D75C5700FD3FDD /* smbViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smbViewController.h; sourceTree = "<group>"; };
+		7E49A94118D75C5700FD3FDD /* smbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smbViewController.m; sourceTree = "<group>"; };
+		7E49A94318D75C5700FD3FDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E49A94918D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMBInternetConnectionIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E49A94A18D75C5700FD3FDD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7E49A95218D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMBInternetConnectionIndicatorTests-Info.plist"; sourceTree = "<group>"; };
+		7E49A95418D75C5700FD3FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E49A95618D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMBInternetConnectionIndicatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E49A92518D75C5700FD3FDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A92E18D75C5700FD3FDD /* CoreGraphics.framework in Frameworks */,
+				7E49A93018D75C5700FD3FDD /* UIKit.framework in Frameworks */,
+				7E49A92C18D75C5700FD3FDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E49A94618D75C5700FD3FDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A94B18D75C5700FD3FDD /* XCTest.framework in Frameworks */,
+				7E49A94D18D75C5700FD3FDD /* UIKit.framework in Frameworks */,
+				7E49A94C18D75C5700FD3FDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E49A91F18D75C5700FD3FDD = {
+			isa = PBXGroup;
+			children = (
+				7E49A93118D75C5700FD3FDD /* SMBInternetConnectionIndicator */,
+				7E49A95018D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests */,
+				7E49A92A18D75C5700FD3FDD /* Frameworks */,
+				7E49A92918D75C5700FD3FDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E49A92918D75C5700FD3FDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A92818D75C5700FD3FDD /* SMBInternetConnectionIndicator.app */,
+				7E49A94918D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E49A92A18D75C5700FD3FDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A92B18D75C5700FD3FDD /* Foundation.framework */,
+				7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */,
+				7E49A92F18D75C5700FD3FDD /* UIKit.framework */,
+				7E49A94A18D75C5700FD3FDD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E49A93118D75C5700FD3FDD /* SMBInternetConnectionIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A93A18D75C5700FD3FDD /* smbAppDelegate.h */,
+				7E49A93B18D75C5700FD3FDD /* smbAppDelegate.m */,
+				7E49A93D18D75C5700FD3FDD /* Main.storyboard */,
+				7E49A94018D75C5700FD3FDD /* smbViewController.h */,
+				7E49A94118D75C5700FD3FDD /* smbViewController.m */,
+				7E49A94318D75C5700FD3FDD /* Images.xcassets */,
+				7E49A93218D75C5700FD3FDD /* Supporting Files */,
+			);
+			path = SMBInternetConnectionIndicator;
+			sourceTree = "<group>";
+		};
+		7E49A93218D75C5700FD3FDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A93318D75C5700FD3FDD /* SMBInternetConnectionIndicator-Info.plist */,
+				7E49A93418D75C5700FD3FDD /* InfoPlist.strings */,
+				7E49A93718D75C5700FD3FDD /* main.m */,
+				7E49A93918D75C5700FD3FDD /* SMBInternetConnectionIndicator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E49A95018D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A95618D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m */,
+				7E49A95118D75C5700FD3FDD /* Supporting Files */,
+			);
+			path = SMBInternetConnectionIndicatorTests;
+			sourceTree = "<group>";
+		};
+		7E49A95118D75C5700FD3FDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E49A95218D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests-Info.plist */,
+				7E49A95318D75C5700FD3FDD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E49A92718D75C5700FD3FDD /* SMBInternetConnectionIndicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E49A95A18D75C5700FD3FDD /* Build configuration list for PBXNativeTarget "SMBInternetConnectionIndicator" */;
+			buildPhases = (
+				7E49A92418D75C5700FD3FDD /* Sources */,
+				7E49A92518D75C5700FD3FDD /* Frameworks */,
+				7E49A92618D75C5700FD3FDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMBInternetConnectionIndicator;
+			productName = SMBInternetConnectionIndicator;
+			productReference = 7E49A92818D75C5700FD3FDD /* SMBInternetConnectionIndicator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E49A94818D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E49A95D18D75C5700FD3FDD /* Build configuration list for PBXNativeTarget "SMBInternetConnectionIndicatorTests" */;
+			buildPhases = (
+				7E49A94518D75C5700FD3FDD /* Sources */,
+				7E49A94618D75C5700FD3FDD /* Frameworks */,
+				7E49A94718D75C5700FD3FDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E49A94F18D75C5700FD3FDD /* PBXTargetDependency */,
+			);
+			name = SMBInternetConnectionIndicatorTests;
+			productName = SMBInternetConnectionIndicatorTests;
+			productReference = 7E49A94918D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E49A92018D75C5700FD3FDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = smb;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Samuel Beek";
+				TargetAttributes = {
+					7E49A94818D75C5700FD3FDD = {
+						TestTargetID = 7E49A92718D75C5700FD3FDD;
+					};
+				};
+			};
+			buildConfigurationList = 7E49A92318D75C5700FD3FDD /* Build configuration list for PBXProject "SMBInternetConnectionIndicator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E49A91F18D75C5700FD3FDD;
+			productRefGroup = 7E49A92918D75C5700FD3FDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E49A92718D75C5700FD3FDD /* SMBInternetConnectionIndicator */,
+				7E49A94818D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E49A92618D75C5700FD3FDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A94418D75C5700FD3FDD /* Images.xcassets in Resources */,
+				7E49A93618D75C5700FD3FDD /* InfoPlist.strings in Resources */,
+				7E49A93F18D75C5700FD3FDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E49A94718D75C5700FD3FDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A95518D75C5700FD3FDD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E49A92418D75C5700FD3FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A93818D75C5700FD3FDD /* main.m in Sources */,
+				7E49A93C18D75C5700FD3FDD /* smbAppDelegate.m in Sources */,
+				7E49A94218D75C5700FD3FDD /* smbViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E49A94518D75C5700FD3FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49A95718D75C5700FD3FDD /* SMBInternetConnectionIndicatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E49A94F18D75C5700FD3FDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E49A92718D75C5700FD3FDD /* SMBInternetConnectionIndicator */;
+			targetProxy = 7E49A94E18D75C5700FD3FDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E49A93418D75C5700FD3FDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E49A93518D75C5700FD3FDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7E49A93D18D75C5700FD3FDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E49A93E18D75C5700FD3FDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E49A95318D75C5700FD3FDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E49A95418D75C5700FD3FDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E49A95818D75C5700FD3FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7E49A95918D75C5700FD3FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E49A95B18D75C5700FD3FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
+				INFOPLIST_FILE = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7E49A95C18D75C5700FD3FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
+				INFOPLIST_FILE = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7E49A95E18D75C5700FD3FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMBInternetConnectionIndicator.app/SMBInternetConnectionIndicator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SMBInternetConnectionIndicatorTests/SMBInternetConnectionIndicatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7E49A95F18D75C5700FD3FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SMBInternetConnectionIndicator.app/SMBInternetConnectionIndicator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
+				INFOPLIST_FILE = "SMBInternetConnectionIndicatorTests/SMBInternetConnectionIndicatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E49A92318D75C5700FD3FDD /* Build configuration list for PBXProject "SMBInternetConnectionIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E49A95818D75C5700FD3FDD /* Debug */,
+				7E49A95918D75C5700FD3FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E49A95A18D75C5700FD3FDD /* Build configuration list for PBXNativeTarget "SMBInternetConnectionIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E49A95B18D75C5700FD3FDD /* Debug */,
+				7E49A95C18D75C5700FD3FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E49A95D18D75C5700FD3FDD /* Build configuration list for PBXNativeTarget "SMBInternetConnectionIndicatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E49A95E18D75C5700FD3FDD /* Debug */,
+				7E49A95F18D75C5700FD3FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E49A92018D75C5700FD3FDD /* Project object */;
+}
