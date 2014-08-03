@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D45B2883-8F66-4A32-B8AF-869FCE4C2142</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SMBInternetConnectionIndicator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B23697BC-E51A-42D2-9CF1-088AE97A5ECD</key>
+		<string>https://github.com/valdu06/SMBInternetConnectionIndicator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SMBInternetConnectionIndicator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B23697BC-E51A-42D2-9CF1-088AE97A5ECD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/valdu06/SMBInternetConnectionIndicator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B23697BC-E51A-42D2-9CF1-088AE97A5ECD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B23697BC-E51A-42D2-9CF1-088AE97A5ECD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SMBInternetConnectionIndicator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

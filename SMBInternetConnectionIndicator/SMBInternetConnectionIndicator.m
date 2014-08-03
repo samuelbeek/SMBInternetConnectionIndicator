@@ -27,14 +27,24 @@
         indicatorView                                   = [[UIView alloc] initWithFrame:frame];
         CGRect labelFrame                               = CGRectMake(0,0,frame.size.width,frame.size.height);
         indicatorLabel                                  = [[UILabel alloc] initWithFrame:labelFrame];
-        indicatorLabel.font                             = [UIFont fontWithName:@"Helvetica" size:12];
+        indicatorLabel.font                             = [UIFont fontWithName:@"Helvetica" size:14];
         indicatorLabel.textColor                        = [UIColor whiteColor];
         indicatorLabel.textAlignment                    = NSTextAlignmentCenter;
-        indicatorLabel.text                             = @"no internet connection";
-        indicatorView.backgroundColor                   = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+        indicatorLabel.contentMode                      = UIViewContentModeBottom;
+        indicatorLabel.text                             = @"No internet connection";
+        
+        /** SIMPLE BACKGROUND COLOR **/
+        //indicatorView.backgroundColor                   = [[UIColor redColor] colorWithAlphaComponent:0.8];
+        /** SIMPLE BACKGROUND COLOR **/
+        
+        /** GRADIENT RED BACKGROUND COLOR **/
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = indicatorView.frame;
+        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0.8 green:0 blue:0 alpha:0.8] CGColor], (id)[[UIColor colorWithRed:0.4 green:0 blue:0 alpha:0.8] CGColor], nil];
+        [indicatorView.layer insertSublayer:gradient atIndex:0];
+        /** GRADIENT RED BACKGROUND COLOR **/
         
         [indicatorView addSubview:indicatorLabel];
-
         
         //Change the host name here to change the server you want to monitor.
         NSString *remoteHostName = @"apple.com";
@@ -48,7 +58,7 @@
                                                      name:kReachabilityChangedNotification
                                                    object:nil];
         
-        }
+    }
     return self;
 }
 
@@ -59,7 +69,7 @@
     [indicatorView removeFromSuperview];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [hostReachability stopNotifier];
-
+    
 }
 
 - (void) reachabilityChanged:(NSNotification *)note {
@@ -67,12 +77,12 @@
 	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
     
-    // show indicator when host can't be reached. 
+    // show indicator when host can't be reached.
     if(netStatus) {
         [indicatorView removeFromSuperview];
     } else {
         [self addSubview:indicatorView];
-
+        
     }
 }
 
