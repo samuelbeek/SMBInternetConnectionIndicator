@@ -30,7 +30,6 @@
         indicatorLabel.font                             = [UIFont fontWithName:@"Helvetica" size:14];
         indicatorLabel.textColor                        = [UIColor whiteColor];
         indicatorLabel.textAlignment                    = NSTextAlignmentCenter;
-        indicatorLabel.contentMode                      = UIViewContentModeBottom;
         indicatorLabel.text                             = @"No internet connection";
         
         /** SIMPLE BACKGROUND COLOR **/
