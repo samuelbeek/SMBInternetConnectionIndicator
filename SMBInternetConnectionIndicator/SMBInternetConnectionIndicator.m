@@ -16,34 +16,56 @@
     UILabel *indicatorLabel;
 }
 
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        //creating the view and it's label
+        // Creating the view, the background color, the icon and the label
         self.userInteractionEnabled                     = FALSE ;
         indicatorView                                   = [[UIView alloc] initWithFrame:frame];
-        CGRect labelFrame                               = CGRectMake(0,0,frame.size.width,frame.size.height);
-        indicatorLabel                                  = [[UILabel alloc] initWithFrame:labelFrame];
-        indicatorLabel.font                             = [UIFont fontWithName:@"Helvetica" size:14];
-        indicatorLabel.textColor                        = [UIColor whiteColor];
-        indicatorLabel.textAlignment                    = NSTextAlignmentCenter;
-        indicatorLabel.text                             = @"No internet connection";
         
         /** SIMPLE BACKGROUND COLOR **/
         //indicatorView.backgroundColor                   = [[UIColor redColor] colorWithAlphaComponent:0.8];
         /** SIMPLE BACKGROUND COLOR **/
-        
+        /** OR **/
         /** GRADIENT RED BACKGROUND COLOR **/
         CAGradientLayer *gradient = [CAGradientLayer layer];
         gradient.frame = indicatorView.frame;
-        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0.8 green:0 blue:0 alpha:0.8] CGColor], (id)[[UIColor colorWithRed:0.4 green:0 blue:0 alpha:0.8] CGColor], nil];
+        gradient.backgroundColor = [[UIColor whiteColor] CGColor];
+        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0.8 green:0 blue:0 alpha:0.8] CGColor], (id)[[UIColor colorWithRed:0.4 green:0 blue:0 alpha:1.0] CGColor], nil];
         [indicatorView.layer insertSublayer:gradient atIndex:0];
         /** GRADIENT RED BACKGROUND COLOR **/
         
-        [indicatorView addSubview:indicatorLabel];
+        UIImage *image = [UIImage imageNamed:@"NetworkIcon"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        [imageView sizeToFit];
+        
+        indicatorLabel                                  = [[UILabel alloc] init];
+        indicatorLabel.font                             = [UIFont fontWithName:@"Helvetica" size:14];
+        indicatorLabel.textColor                        = [UIColor whiteColor];
+        indicatorLabel.shadowColor                      = [UIColor blackColor];
+        indicatorLabel.shadowOffset                     = CGSizeMake(0, -1);
+        indicatorLabel.text                             = @"No internet connection";
+        [indicatorLabel sizeToFit];
+        
+        CGFloat imageLabelHeight;
+        CGFloat statusBarMargin = 6;
+        
+        // compare the label height with the icon height
+        if (indicatorLabel.frame.size.height > imageView.frame.size.height) {
+            imageLabelHeight = indicatorLabel.frame.size.height;
+        } else {
+            imageLabelHeight = imageView.frame.size.height;
+        }
+        
+        UIView *imageLabelView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width*1.25 + indicatorLabel.frame.size.width, imageLabelHeight)];
+        imageLabelView.center = CGPointMake(indicatorView.center.x,indicatorView.center.y + statusBarMargin);
+        [imageLabelView addSubview:imageView];
+        [imageLabelView addSubview:indicatorLabel];
+        indicatorLabel.center = CGPointMake(imageView.frame.origin.x + imageView.frame.size.width*1.25 + indicatorLabel.frame.size.width/2, imageView.center.y);
+        
+        [indicatorView addSubview:imageLabelView];
         
         //Change the host name here to change the server you want to monitor.
         NSString *remoteHostName = @"apple.com";
@@ -60,8 +82,6 @@
     }
     return self;
 }
-
-
 
 -(void)dealloc {
     //remove observer and stop notifier
