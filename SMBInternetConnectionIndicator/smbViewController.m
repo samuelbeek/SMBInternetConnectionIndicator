@@ -23,11 +23,11 @@
 {
     [super viewDidLoad];
     
-    //create frame for the indicator
+    // Create frame for the indicator
     CGRect screenRect               = CGRectMake(0, 0, self.view.frame.size.width, 64);
     _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
     [self.view addSubview:_internetConnectionIndicator];
-    }
+}
 
 - (void)didReceiveMemoryWarning
 {

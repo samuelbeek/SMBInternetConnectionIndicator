@@ -7,20 +7,17 @@
 //
 
 #import "SMBInternetConnectionIndicator.h"
-#import "Reachability.h"
 
+@interface SMBInternetConnectionIndicator ()
 
-@implementation SMBInternetConnectionIndicator {
-    Reachability *hostReachability;
-    UIView *indicatorView;
-    UILabel *indicatorLabel;
-}
+@end
+
+@implementation SMBInternetConnectionIndicator
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
         // Creating the view, the background color, the icon and the label
         self.userInteractionEnabled                     = FALSE ;
         indicatorView                                   = [[UIView alloc] initWithFrame:frame];
@@ -67,6 +64,7 @@
         
         [indicatorView addSubview:imageLabelView];
         
+        
         //Change the host name here to change the server you want to monitor.
         NSString *remoteHostName = @"apple.com";
         
@@ -88,7 +86,6 @@
     [indicatorView removeFromSuperview];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [hostReachability stopNotifier];
-    
 }
 
 - (void) reachabilityChanged:(NSNotification *)note {
@@ -96,15 +93,37 @@
 	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
     
-    // show indicator when host can't be reached.
+    // show indicator with animation when host can't be reached.
+    CGRect tIndicFrame;
+    
     if(netStatus) {
-        [indicatorView removeFromSuperview];
-    } else {
-        [self addSubview:indicatorView];
+        tIndicFrame.origin.y -= indicatorView.frame.size.height;
+        tIndicFrame.size.height += indicatorView.frame.size.height;
         
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             indicatorView.frame = tIndicFrame;
+                         }
+                         completion:^(BOOL finished) {
+                             [indicatorView removeFromSuperview];
+                         }];
+    } else {
+        tIndicFrame.origin.y += indicatorView.frame.size.height;
+        tIndicFrame.size.height -= indicatorView.frame.size.height;
+        
+        [self addSubview:indicatorView];
+        [UIView animateWithDuration:0.5
+                              delay:0.0
+                            options:UIViewAnimationOptionBeginFromCurrentState
+                         animations:^{
+                             indicatorView.frame = tIndicFrame;
+                         }
+                         completion:^(BOOL finished) {
+                         }];
     }
 }
-
 
 
 @end
