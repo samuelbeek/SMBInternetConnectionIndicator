@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52ACF83E199181B300EB5D30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ACF83D199181B300EB5D30 /* QuartzCore.framework */; };
 		7E49A92C18D75C5700FD3FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92B18D75C5700FD3FDD /* Foundation.framework */; };
 		7E49A92E18D75C5700FD3FDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */; };
 		7E49A93018D75C5700FD3FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49A92F18D75C5700FD3FDD /* UIKit.framework */; };
@@ -39,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		52ACF83D199181B300EB5D30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7E49A92818D75C5700FD3FDD /* SMBInternetConnectionIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMBInternetConnectionIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E49A92B18D75C5700FD3FDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52ACF83E199181B300EB5D30 /* QuartzCore.framework in Frameworks */,
 				7E49A96418D75D6800FD3FDD /* SystemConfiguration.framework in Frameworks */,
 				7E49A92E18D75C5700FD3FDD /* CoreGraphics.framework in Frameworks */,
 				7E49A93018D75C5700FD3FDD /* UIKit.framework in Frameworks */,
@@ -115,7 +112,6 @@
 		7E49A92A18D75C5700FD3FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52ACF83D199181B300EB5D30 /* QuartzCore.framework */,
 				7E49A96318D75D6800FD3FDD /* SystemConfiguration.framework */,
 				7E49A92B18D75C5700FD3FDD /* Foundation.framework */,
 				7E49A92D18D75C5700FD3FDD /* CoreGraphics.framework */,
@@ -237,6 +233,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Samuel Beek";
 				TargetAttributes = {
+					7E49A92718D75C5700FD3FDD = {
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
+					};
 					7E49A94818D75C5700FD3FDD = {
 						TestTargetID = 7E49A92718D75C5700FD3FDD;
 					};
@@ -417,10 +420,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
 				INFOPLIST_FILE = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,10 +438,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Prefix.pch";
 				INFOPLIST_FILE = "SMBInternetConnectionIndicator/SMBInternetConnectionIndicator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

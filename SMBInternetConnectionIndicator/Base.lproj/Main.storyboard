@@ -9,8 +9,8 @@
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="gw8-vZ-BS7" customClass="smbViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l3Z-SC-Dip"/>
-                        <viewControllerLayoutGuide type="bottom" id="9Wv-8x-q1o"/>
+                        <viewControllerLayoutGuide type="top" id="JNo-KR-fMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="tba-aQ-wD7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g93-bd-ZXG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -40,8 +40,9 @@ made by Samuel Beek samuelbeek.com</string>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enM-1i-4XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

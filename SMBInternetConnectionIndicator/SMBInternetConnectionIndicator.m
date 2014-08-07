@@ -14,8 +14,7 @@
 
 @implementation SMBInternetConnectionIndicator
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Creating the view, the background color, the icon and the label
@@ -64,7 +63,6 @@
         
         [indicatorView addSubview:imageLabelView];
         
-        
         //Change the host name here to change the server you want to monitor.
         NSString *remoteHostName = @"apple.com";
         
@@ -81,14 +79,14 @@
     return self;
 }
 
--(void)dealloc {
+- (void)dealloc {
     //remove observer and stop notifier
     [indicatorView removeFromSuperview];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [hostReachability stopNotifier];
 }
 
-- (void) reachabilityChanged:(NSNotification *)note {
+- (void)reachabilityChanged:(NSNotification *)note {
 	Reachability* curReach = [note object];
 	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     NetworkStatus netStatus = [curReach currentReachabilityStatus];
@@ -124,6 +122,5 @@
                          }];
     }
 }
-
 
 @end
