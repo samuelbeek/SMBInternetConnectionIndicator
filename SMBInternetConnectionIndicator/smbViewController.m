@@ -10,7 +10,6 @@
 #import "SMBInternetConnectionIndicator.h"
 
 @interface smbViewController ()
-
 //add the indicator view as a property
 @property () SMBInternetConnectionIndicator *internetConnectionIndicator;
 
@@ -23,11 +22,20 @@
 {
     [super viewDidLoad];
     
-    //create frame for the indicator
-    CGRect screenRect               = CGRectMake(0, 10, 320, 30);
+    // Create frame for the indicator
+    CGRect screenRect               = CGRectMake(0, 0, self.view.bounds.size.width, 64);
     _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    [_internetConnectionIndicator setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin)];
     [self.view addSubview:_internetConnectionIndicator];
-    }
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [_internetConnectionIndicator removeFromSuperview];
+    CGRect screenRect               = CGRectMake(0, 0, self.view.bounds.size.width, 64);
+    _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    [_internetConnectionIndicator setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin)];
+    [self.view addSubview:_internetConnectionIndicator];
+}
 
 - (void)didReceiveMemoryWarning
 {

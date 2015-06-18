@@ -15,11 +15,20 @@ This class uses Reachability by Tony Million.
    <code>@property () SMBInternetConnectionIndicator *internetConnectionIndicator;</code>
 7. Now creat a rectamgle where you want to add the indicator in the viewDidLoad funciton: 
 <pre> 
-    //create frame for the indicator
-    CGRect screenRect                   = CGRectMake(0, 10, 320, 30);
-    self.internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    // Create frame for the indicator
+    CGRect screenRect               = CGRectMake(0, 0, self.view.bounds.size.width, 64);
+    _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    [_internetConnectionIndicator setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin)];
     [self.view addSubview:_internetConnectionIndicator];
 </pre> 
-8. Run your application and turn on AirPlane Mode. You'll see the indicator! 
+8. Add this code in the willAnimateRotationToInterfaceOrientation:duration function: 
+<pre> 
+    [_internetConnectionIndicator removeFromSuperview];
+    CGRect screenRect               = CGRectMake(0, 0, self.view.bounds.size.width, 64);
+    _internetConnectionIndicator    = [[SMBInternetConnectionIndicator alloc] initWithFrame:screenRect];
+    [_internetConnectionIndicator setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin)];
+    [self.view addSubview:_internetConnectionIndicator];
+</pre> 
+9. Run your application and turn on AirPlane Mode. You'll see the indicator! 
 
 If you want to make changes, the indicator works just like any other UIView. 

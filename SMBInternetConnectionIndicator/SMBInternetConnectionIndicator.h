@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface SMBInternetConnectionIndicator : UIView
+
+@interface SMBInternetConnectionIndicator : UIView {
+    Reachability *hostReachability;
+    UIView *indicatorView;
+    UILabel *indicatorLabel;
+}
 
 @end
